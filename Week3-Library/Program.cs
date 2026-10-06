@@ -1,16 +1,15 @@
 ﻿using Week3_Library;
 
-Book book = new Book();
+class Program
+{
+    static void Main(string[] args)
+    {
 
-book.Title = "C# for beginners";
-book.Author = "BillGates";
-book.ISBN = "12345678";
+        Book book = new Book("C# for beginners", "Bill Gates", 
+            "12345678");
 
-book.DisplayInfo();
+        book.DisplayInfo();
+    }
+}
 
-Book book1 = new Book();
-book1.Title = "C# Methods and Classes";
-book1.Author = "Microsoft";
-book1.ISBN = "55667778";
 
-book1.DisplayInfo();
