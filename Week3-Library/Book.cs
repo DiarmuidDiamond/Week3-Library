@@ -7,9 +7,46 @@ namespace Week3_Library
 
      class Book
     {
-       public string Title;
-       public string Author;
-       public string ISBN;
+       private string title;
+       private string author;
+       private string isbn;
+
+        public string Title
+        {
+            get { return title; }  // get method
+            set { title = value; } // set method
+        }
+        public string Author
+        { 
+            get { return author; }
+            set 
+            {  
+                if(!value.Any(char.IsDigit))
+                {
+                    author = value;
+                }
+                else
+                {
+                    Console.WriteLine("Error: Author name cannot contain" +
+                        "numbers.");
+                }
+            }
+        }
+        public string ISBN
+        { 
+            get { return isbn; }
+            set 
+            {
+                if (value != "")
+                {
+                    isbn = value;
+                }
+                else
+                {
+                    Console.WriteLine("Error: ISBN cannot be blank.");
+                }
+            }
+        }
 
         public Book(string bookTitle, string bookAuthor, string bookISBN)
         {
