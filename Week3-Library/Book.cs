@@ -10,8 +10,15 @@ namespace Week3_Library
        public string Title;
        public string Author;
        public string ISBN;
+
+        public Book(string bookTitle, string bookAuthor, string bookISBN)
+        {
+            this.Title = bookTitle;
+            this.Author = bookAuthor; 
+            this.ISBN = bookISBN;
+        }
    
-        public void DisplayInfo()
+        void DisplayInfo()
         {
             Console.WriteLine($"Book title: {Title}");
             Console.WriteLine($"Book Author: {Author}");
